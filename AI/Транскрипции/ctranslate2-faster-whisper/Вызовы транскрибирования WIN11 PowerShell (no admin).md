@@ -1,5 +1,14 @@
 
 # Предаврительная настройка:
+
+```
+$MODEL_DIR = "D:\AI\CTranslate2_Faster-whisper_large_v3\models\faster-whisper-large-v3" 
+```
+- адрес директории с файлом llvm "model.bin".
+$MODEL_DIR = "D:\Trading\Baga\models\faster-whisper-large-v3"
+
+---
+
 ```
 mkdir .\out -ea 0 | Out-Null
 ```
@@ -51,15 +60,10 @@ $PROMPT = @"
 ```
 - слова, которые точно используются в видео. Необходимо для более точного преобразования слов из речи в нужные слова в тексте.
 
-```
-$MODEL_DIR = "D:\AI\CTranslate2_Faster-whisper_large_v3\models\faster-whisper-large-v3" 
-```
-- адрес директории с файлом llvm "model.bin".
-$MODEL_DIR = "D:\Trading\Baga\models\faster-whisper-large-v3"
 
 # Обработка одного файла:
 
-***Вызов для запуска обработки одного файла:***
+## Вызов для запуска обработки одного файла:
 ```
 whisper-ctranslate2 ".\название_файла.формат" `
 --model_directory "$MODEL_DIR" `
@@ -70,7 +74,7 @@ whisper-ctranslate2 ".\название_файла.формат" `
 --initial_prompt $PROMPT
 ```
 
-***==ФАЙНТЮН== Команда для запуска обработки одного файла:***
+## ==ФАЙНТЮН== Команда для запуска обработки одного файла:
 ```
 whisper-ctranslate2 ".\название_файла.формат" `
   --model_directory "$MODEL_DIR" `
@@ -98,7 +102,7 @@ whisper-ctranslate2 ".\название_файла.формат" `
 
 # Несколько файлов:
 
-***Вызов для 1 формата (mp4):***
+## Вызов для 1 формата (mp4):
 ```
 Get-ChildItem -File -Filter *.mp4 | ForEach-Object { 
   Write-Host "Обрабатываю: $($_.Name)"
@@ -129,7 +133,7 @@ Get-ChildItem -File | Where-Object { $ext -contains $_.Extension.ToLower() } | F
 }
 ```
 
-***==ФАЙНТЮН== вызов для обработки одного формата:***
+## ==ФАЙНТЮН== вызов для обработки одного формата:
 ```
 Get-ChildItem -File -Filter *.mp4 | ForEach-Object { 
   Write-Host "Обрабатываю: $($_.Name)"
