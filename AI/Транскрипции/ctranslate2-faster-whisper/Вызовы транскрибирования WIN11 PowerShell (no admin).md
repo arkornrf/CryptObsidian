@@ -1,6 +1,12 @@
 
-***Предаврительная настройка:***
-``` mkdir .\out -ea 0 | Out-Null ```  - создание папки для выгрузки последующего текста в поддиректорию (внимание к тому, по какому адресу каталога открыт PowerShell).
+# Предаврительная настройка:
+```
+mkdir .\out -ea 0 | Out-Null
+```
+- создание папки для выгрузки последующего текста в поддиректорию (внимание к тому, по какому адресу каталога открыт PowerShell).
+
+---
+
 
 ``` 
 $PROMPT = @"
@@ -45,7 +51,10 @@ $PROMPT = @"
 ```
 - слова, которые точно используются в видео. Необходимо для более точного преобразования слов из речи в нужные слова в тексте.
 
-``` $MODEL_DIR = "D:\AI\CTranslate2_Faster-whisper_large_v3\models\faster-whisper-large-v3" ``` - адрес директории с файлом llvm "model.bin".
+```
+$MODEL_DIR = "D:\AI\CTranslate2_Faster-whisper_large_v3\models\faster-whisper-large-v3" 
+```
+- адрес директории с файлом llvm "model.bin".
 $MODEL_DIR = "D:\Trading\Baga\models\faster-whisper-large-v3"
 
 # Обработка одного файла:
