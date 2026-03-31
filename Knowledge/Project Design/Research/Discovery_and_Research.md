@@ -1,531 +1,651 @@
 # Discovery and Research
 
-> Type: hub / concept / process  
-> Priority: must know  
-> Role in system: this node explains how a Product Designer learns **what problem is actually worth solving**, **for whom**, and **on what evidence**.
+> Тип заметки: `hub`  
+> Уровень: `must know`  
+> Роль в системе: мост между [[Product Thinking]] и [[UX_UI]], который помогает понять **что именно нужно проектировать**, **для кого**, **почему** и **на основании каких данных**.
 
 ---
 
-## 1. What this is
+# 1. Что это
 
-**Discovery and Research** is the part of Product Design where you do not jump straight into screens and solutions.  
-You first try to understand:
+**Discovery** — это этап и тип мышления, в котором команда пытается **понять проблему до того, как начнёт проектировать решение**.
 
-- who the user is,
-- what problem they actually have,
-- how they behave now,
-- what context influences their actions,
-- what the business expects,
-- what assumptions may be wrong.
+**Research** — это набор способов получения и анализа информации о пользователях, их поведении, мотивации, болях, задачах, контексте использования и реакции на продукт.
 
-In simple terms:
+Если упростить:
 
-- **Discovery** = finding out **what is worth solving**
-- **Research** = gathering and interpreting evidence to understand the problem, users, and context
-
-Discovery and Research help a designer move from **guessing** to **reasoned decisions**.
+- **Discovery** отвечает на вопрос:  
+  **"Что за проблему мы вообще решаем?"**
+- **Research** отвечает на вопрос:  
+  **"Откуда мы знаем, что эта проблема действительно существует и как она проявляется?"**
 
 ---
 
-## 2. Why this is needed
+# 2. Зачем это нужно
 
-Without Discovery and Research, a designer can easily create:
+Без discovery и research дизайнер рискует:
 
-- a beautiful but unnecessary feature,
-- a convenient flow for the wrong audience,
-- a solution for a false problem,
-- an interface that ignores real behavior,
-- a feature that pleases stakeholders but does not help users.
+- проектировать несуществующую проблему;
+- решать симптом, а не причину;
+- делать продукт “по ощущениям”;
+- тратить время команды на красивое, но ненужное решение;
+- спорить вкусами вместо аргументов;
+- собирать интерфейс без понимания реального пользователя.
 
-This block is needed because Product Design is not only about creating interfaces.  
-It is about increasing the chance that the team is solving the **right problem**.
+Именно поэтому discovery и research нужны, чтобы:
 
----
-
-## 3. Where this is used in Product Design
-
-Discovery and Research appear:
-
-- before a feature is designed,
-- while understanding an existing product,
-- when validating complaints or ideas,
-- when prioritizing problems,
-- when trying to improve conversions, retention, activation, or usability,
-- after release, when you want to understand why something did or did not work.
-
-This means Discovery and Research are not “one phase and finished forever”.  
-They return repeatedly across the product lifecycle.
+- снизить неопределённость;
+- понять пользователя и контекст;
+- уточнить проблему;
+- проверить гипотезы;
+- выбрать, **что действительно стоит делать**;
+- сократить риск бесполезной работы.
 
 ---
 
-## 4. Core idea
+# 3. Где это находится в системе Product Design
 
-A beginner often thinks:
+[[Product Design]] включает в себя не только визуальное проектирование, но и **понимание продукта как системы решений**.
 
-> “First we invent the solution, then maybe ask users what they think.”
+В этой системе:
 
-A stronger product mindset works like this:
+- [[Product Thinking]] помогает определить, **зачем** что-то делать;
+- [[Discovery and Research]] помогает понять, **что именно происходит у пользователя и в продукте**;
+- [[UX_UI]] помогает превратить это в понятный опыт;
+- [[Metrics and Analytics]] помогает проверить, **есть ли реальный результат**;
+- [[Delivery Mindset]] помогает довести решение до релиза;
+- [[Full Product Designer Workflow]] связывает всё в единый процесс.
 
-1. understand the user and the context,
-2. clarify the problem,
-3. form hypotheses,
-4. choose what to test,
-5. design solutions,
-6. validate them,
-7. iterate.
+---
 
-That is why Discovery and Research connect directly to:
+# 4. Что важно понять в самом начале
 
-- [[Product Design]]
+## Discovery — это не про “искать идеи”
+Новички часто думают, что discovery — это поиск вдохновения, идей или фич.
+
+На самом деле discovery — это прежде всего:
+
+- поиск проблемы,
+- уточнение контекста,
+- проверка предположений,
+- понимание ограничений,
+- выбор правильного направления.
+
+## Research — это не только интервью
+Research — это не один метод и не одна “созвониться с пользователем”.
+
+Это целый набор способов:
+- спрашивать;
+- наблюдать;
+- анализировать;
+- сравнивать;
+- тестировать;
+- интерпретировать данные.
+
+## Product Designer не обязан быть отдельным full-time researcher
+Но он обязан:
+- понимать, **зачем нужен research**;
+- знать, **какой метод когда уместен**;
+- уметь участвовать в discovery;
+- уметь задавать правильные вопросы;
+- уметь не рисовать раньше времени.
+
+---
+
+# 5. Из чего состоит Discovery and Research
+
+## 5.1. Problem Framing
+Понимание и формулировка проблемы.
+
+Вопросы:
+- Что именно не так?
+- У кого возникает проблема?
+- В каком контексте?
+- Как часто?
+- Почему это важно?
+- Как это влияет на продукт и бизнес?
+
+Связи:
+- [[Problem Statement]]
+- [[Product Thinking]]
+- [[Business Context]]
+
+---
+
+## 5.2. Assumptions and Hypotheses
+Выявление предположений команды и перевод их в гипотезы.
+
+Примеры:
+- “Пользователи бросают онбординг, потому что он слишком длинный.”
+- “Люди не используют таймер, потому что интерфейс не объясняет, с чего начать.”
+
+Связи:
+- [[Hypothesis]]
+- [[Experimentation]]
+- [[Metrics and Analytics]]
+
+---
+
+## 5.3. User Understanding
+Понимание пользователя как человека в конкретной задаче.
+
+Это включает:
+- цели,
+- мотивацию,
+- ограничения,
+- страхи,
+- привычки,
+- ожидания,
+- контекст.
+
+Связи:
+- [[User Needs]]
+- [[Jobs To Be Done]]
+- [[User Segments]]
+
+---
+
+## 5.4. Research Methods
+Методы, с помощью которых мы собираем данные.
+
+Сюда входят:
+- интервью;
+- опросы;
+- usability testing;
+- конкурентный анализ;
+- анализ поведения;
+- heuristic evaluation;
+- diary / observation methods;
+- анализ запросов, отзывов, support feedback.
+
+Связи:
+- [[User Interview]]
+- [[Survey]]
+- [[Usability Testing]]
+- [[Competitive Analysis]]
+- [[Heuristic Evaluation]]
+
+---
+
+## 5.5. Synthesis
+Осмысление собранной информации.
+
+Собрать данные недостаточно — нужно:
+- выделить паттерны,
+- отделить факты от интерпретаций,
+- сформулировать инсайты,
+- понять, что важно, а что вторично.
+
+Связи:
+- [[Insight]]
+- [[Affinity Mapping]]
+- [[Problem Statement]]
+
+---
+
+## 5.6. Validation
+Проверка того, что выводы и направление действительно имеют смысл.
+
+Валидация может быть:
+- исследовательской;
+- поведенческой;
+- продуктовой;
+- количественной;
+- через прототип;
+- через метрики;
+- через тестирование.
+
+Связи:
+- [[Validation]]
+- [[Prototype]]
+- [[Metrics and Analytics]]
+
+---
+
+# 6. Основные виды research, которые нужно знать на базовом уровне
+
+Ниже — не полный академический список, а **базовый must know для начинающего Product Designer**.
+
+## 6.1. User Interview
+Разговор с пользователем для понимания его опыта, задач, поведения и боли.
+
+Когда полезно:
+- нужно понять контекст;
+- нужно услышать живой язык пользователя;
+- нужно проверить, как человек описывает свою проблему.
+
+Что даёт:
+- качественное понимание;
+- гипотезы;
+- материал для problem framing.
+
+Риск:
+- если задавать наводящие вопросы, можно получить ложную картину.
+
+Связи:
+- [[User Interview]]
+- [[Question Design]]
+
+---
+
+## 6.2. Usability Testing
+Проверка того, может ли пользователь пройти сценарий и насколько это легко.
+
+Когда полезно:
+- уже есть интерфейс, прототип или сценарий;
+- нужно увидеть, где человек путается;
+- нужно проверить понятность решения.
+
+Что даёт:
+- конкретные проблемные места;
+- наблюдение, а не мнение;
+- материал для улучшения UX.
+
+Связи:
+- [[Usability Testing]]
+- [[UX_UI]]
+- [[Prototype]]
+
+---
+
+## 6.3. Competitive Analysis
+Изучение похожих продуктов и решений на рынке.
+
+Когда полезно:
+- нужно понять паттерны;
+- нужно увидеть ожидания пользователей;
+- нужно понять, как рынок решает похожие задачи.
+
+Что даёт:
+- ориентиры;
+- паттерны;
+- возможные решения и антипримеры.
+
+Риск:
+- копирование без понимания.
+
+Связи:
+- [[Competitive Analysis]]
+- [[Market]]
+- [[Product Thinking]]
+
+---
+
+## 6.4. Heuristic Evaluation
+Экспертный разбор интерфейса по принципам удобства и понятности.
+
+Когда полезно:
+- нужно быстро выявить явные UX-проблемы;
+- нет доступа к пользователям;
+- нужен первый слой анализа до тестирования.
+
+Что даёт:
+- список очевидных проблем;
+- структурированное ревью интерфейса.
+
+Связи:
+- [[Heuristic Evaluation]]
+- [[UX_UI]]
+
+---
+
+## 6.5. Surveys
+Опросы для сбора мнений и количественных сигналов от группы людей.
+
+Когда полезно:
+- нужно быстро собрать картину по большему числу респондентов;
+- нужно проверить распространённость проблемы;
+- нужно собрать сегменты, предпочтения, частоту.
+
+Риск:
+- люди не всегда точно описывают реальное поведение.
+
+Связи:
+- [[Survey]]
+- [[Quantitative Research]]
+
+---
+
+## 6.6. Behavioral / Product Data
+Анализ того, что пользователи реально делают в продукте.
+
+Это может включать:
+- drop-off во воронке;
+- какие функции используют;
+- на каком шаге выходят;
+- какие экраны игнорируют;
+- как часто возвращаются.
+
+Что даёт:
+- связь research и метрик;
+- понимание реального поведения.
+
+Связи:
+- [[Metrics and Analytics]]
+- [[Funnel]]
+- [[Adoption]]
+- [[Retention]]
+
+---
+
+# 7. Discovery как процесс
+
+Ниже — простая модель discovery, которую полезно помнить новичку.
+
+## Шаг 1. Зафиксировать проблему
+Не “хочу улучшить интерфейс”, а:
+- что именно не так,
+- у кого,
+- где,
+- почему это важно.
+
+## Шаг 2. Собрать предположения
+Что команда уже думает?
+Какие гипотезы уже есть?
+Где сейчас просто догадки?
+
+## Шаг 3. Выбрать методы исследования
+Что даст нужную ясность?
+- интервью?
+- тестирование?
+- анализ конкурентов?
+- метрики?
+- опрос?
+
+## Шаг 4. Собрать данные
+Получить реальные сигналы:
+- поведенческие;
+- качественные;
+- контекстные;
+- продуктовые.
+
+## Шаг 5. Осмыслить материал
+- выделить паттерны;
+- заметить противоречия;
+- сформулировать инсайты;
+- уточнить проблему.
+
+## Шаг 6. Превратить выводы в решение
+Теперь уже можно переходить к:
+- сценариям;
+- UX-логике;
+- прототипам;
+- приоритизации.
+
+## Шаг 7. Проверить решение
+- usability testing;
+- ранняя валидация;
+- запуск;
+- метрики;
+- итерации.
+
+Связи:
+- [[Full Product Designer Workflow]]
+- [[Delivery Mindset]]
+- [[Validation]]
+
+---
+
+# 8. Чем discovery отличается от design
+
+Это одна из важнейших границ для новичка.
+
+## Discovery
+Отвечает на вопрос:
+**“Что за проблема и что вообще стоит делать?”**
+
+## Design
+Отвечает на вопрос:
+**“Как это лучше решить через интерфейс, структуру и взаимодействие?”**
+
+Если перепутать эти слои, то можно:
+- слишком рано уйти в макеты;
+- делать дизайн того, что не нужно;
+- спорить о цветах до проверки самой идеи.
+
+---
+
+# 9. Чем research отличается от analytics
+
+Это тоже критично.
+
+## Research
+Чаще помогает понять:
+- **почему** это происходит;
+- что чувствует человек;
+- как он объясняет своё поведение;
+- в каком он контексте.
+
+## Analytics
+Чаще помогает понять:
+- **что** происходит;
+- где именно люди отваливаются;
+- как часто это происходит;
+- насколько это масштабно.
+
+Простая формула:
+
+- **Research** даёт смысл и контекст.
+- **Analytics** даёт масштаб и поведенческий сигнал.
+
+Они усиливают друг друга.
+
+Связи:
+- [[Metrics and Analytics]]
+
+---
+
+# 10. Что должен уметь понимать новичок
+
+## Must know
+- зачем нужен discovery;
+- чем проблема отличается от решения;
+- чем research отличается от догадки;
+- базовые qualitative и quantitative методы;
+- почему нельзя проектировать слишком рано;
+- как связаны исследование, UX и метрики.
+
+## Should know
+- базовые принципы интервью;
+- базовые принципы usability testing;
+- что такое hypothesis;
+- как собирать инсайты;
+- как использовать конкурентный анализ без копирования.
+
+## Nice to know
+- продвинутые исследования;
+- долгосрочные longitudinal methods;
+- сервис-дизайн-методы;
+- сложные mixed-method frameworks.
+
+---
+
+# 11. Типичные ошибки
+
+## Ошибка 1. Начинать с решения
+“Надо добавить кнопку/экран/функцию” — до понимания проблемы.
+
+## Ошибка 2. Подменять research мнением
+“Мне кажется”, “пользователю будет удобно”, “наверное, так лучше”.
+
+## Ошибка 3. Спрашивать не о поведении, а о фантазии
+“Вы бы пользовались?” — слабый вопрос.  
+Лучше: “Как вы сейчас делаете это?” / “Что вы делали в последний раз?”
+
+## Ошибка 4. Считать конкурентный анализ исследованием пользователя
+Конкуренты показывают рынок, но не заменяют понимание реального человека.
+
+## Ошибка 5. Собирать данные без синтеза
+Если вы просто провели интервью и записали ответы — это ещё не insight.
+
+## Ошибка 6. Не связывать research с бизнес- и продуктовой задачей
+Исследование ради исследования — слабая практика.
+
+## Ошибка 7. Слишком поздно тестировать
+Если решение показывают пользователю только после долгой проработки, цена ошибки выше.
+
+---
+
+# 12. Вопросы к себе
+
+- Я понимаю, какую проблему мы пытаемся решить?
+- Я могу отделить проблему от идеи решения?
+- Я знаю, какие мои текущие выводы основаны на данных, а какие на догадке?
+- Я могу объяснить, зачем здесь нужен research?
+- Я понимаю, какой метод подходит под какой вопрос?
+- Я умею описать, какую пользу discovery даёт продукту и бизнесу?
+- Я понимаю, почему analytics не заменяет research, а research не заменяет analytics?
+
+---
+
+# 13. Признаки mastery
+
+Тема считается освоенной на базовом уровне, если вы:
+
+- не прыгаете сразу в интерфейс;
+- умеете формулировать проблему;
+- умеете отличать гипотезу от факта;
+- понимаете, когда нужен интервью-формат, а когда testing или analytics;
+- умеете делать простой синтез выводов;
+- умеете использовать результаты исследования как основание для дизайна.
+
+Тема считается освоенной на более сильном уровне, если вы:
+
+- связываете discovery с product goals;
+- понимаете компромиссы между качественным и количественным исследованием;
+- умеете строить исследование под вопрос, а не “по шаблону”;
+- умеете превращать инсайты в продуктовые решения и приоритеты.
+
+---
+
+# 14. Как это проявляется в WOTimer
+
+WOTimer — отличный кейс, потому что новичок легко может начать думать только о функциях таймера и визуале, но discovery заставляет идти глубже.
+
+## Примеры discovery-вопросов для WOTimer
+- Кто основной пользователь WOTimer?
+- Для какой задачи он запускает приложение?
+- Что для него сейчас неудобно в подобных решениях?
+- Он заранее знает параметры тренировки или хочет быстро настроить их на ходу?
+- Где у него основное трение:
+  - настройка?
+  - чтение экрана?
+  - аудио-подсказки?
+  - логика переходов между фазами?
+  - старт сценария?
+
+## Примеры research-гипотез
+- Пользователь путается в фазах таймера.
+- Пользователь не понимает разницу между настройками интервалов.
+- Пользователь хочет начать тренировку быстрее, чем это позволяет текущий экран.
+- Визуальная сложность повышает когнитивную нагрузку во время тренировки.
+- Аудио-подсказки важнее, чем количество визуальных деталей на экране.
+
+## Какие методы можно применить
+- интервью с несколькими потенциальными пользователями;
+- анализ конкурентов среди workout timer apps;
+- usability review текущего интерфейса;
+- сценарный тест на прототипе:
+  - “настрой 4 фазы и запусти тренировку”;
+- фиксация проблемных мест и синтез.
+
+## Какие выводы это может дать
+- какие функции действительно core;
+- что можно упростить;
+- какие настройки вторичны;
+- где нужен onboarding;
+- где важнее скорость, чем глубина;
+- что станет вашим первым MVP.
+
+Связи:
+- [[WOTimer Case]]
 - [[Product Thinking]]
 - [[UX_UI]]
 - [[Metrics and Analytics]]
 - [[Delivery Mindset]]
-- [[Full Product Designer Workflow]]
 
 ---
 
-## 5. Difference between Discovery and Research
+# 15. Как это выглядит в вакансии
 
-These terms are close, but not identical.
+Даже junior/middle Product Designer редко нанимается только за умение рисовать.
 
-### Discovery
-Discovery is the broader activity of exploring:
-- what problem exists,
-- why it matters,
-- for whom,
-- what the business needs,
-- what opportunity may exist,
-- what should be prioritized.
+В описаниях ролей обычно ожидают:
+- problem solving;
+- user-centered thinking;
+- research participation;
+- hypothesis-driven approach;
+- ability to validate decisions;
+- collaboration with PM and engineering;
+- data-informed design.
 
-Discovery often includes:
-- problem framing,
-- stakeholder discussions,
-- user interviews,
-- market and competitor review,
-- hypothesis generation,
-- deciding what to test.
-
-### Research
-Research is the more focused activity of gathering and interpreting evidence.
-
-Research often includes:
-- interviews,
-- usability testing,
-- surveys,
-- behavioral analysis,
-- heuristic review,
-- diary studies,
-- competitive analysis,
-- data interpretation.
-
-In simple terms:
-
-- **Discovery asks**: *What is happening and what is worth solving?*
-- **Research asks**: *What evidence helps us understand this better?*
+Это значит, что discovery и research — не дополнительная “академическая часть”, а реальная составляющая профессии.
 
 ---
 
-## 6. Main subtopics inside this node
+# 16. Как это выглядит в портфолио
 
-This node contains the following subdomains:
+Слабый кейс:
+- “Вот экраны, которые я сделал.”
 
-### 6.1 Problem discovery
-Understanding:
-- what pain exists,
-- what users struggle with,
-- whether this is a real recurring issue,
-- whether it is worth solving.
+Сильнее:
+- какую проблему заметили;
+- какие предположения были;
+- что исследовали;
+- что узнали;
+- как это повлияло на решение;
+- что изменилось после проверки.
 
-### 6.2 User understanding
-Understanding:
-- who the user is,
-- what their goals are,
-- what context they act in,
-- what blocks them,
-- what they expect.
-
-### 6.3 Assumptions and hypotheses
-Turning vague beliefs into explicit statements.
-
-Example:
-- “Users probably stop using the timer because the setup is too confusing.”
-- “If we simplify workout setup, session completion may improve.”
-
-### 6.4 Research methods
-Ways to gather evidence:
-- interviews,
-- usability testing,
-- surveys,
-- product analytics,
-- competitor review,
-- behavioral observation.
-
-### 6.5 Synthesis
-Making sense of findings:
-- patterns,
-- user pain points,
-- opportunities,
-- contradictions,
-- priorities.
-
-### 6.6 Validation
-Checking whether the team understood the problem correctly and whether a proposed solution actually helps.
+То есть discovery и research — это то, что делает кейс **продуктовым**, а не просто визуальным.
 
 ---
 
-## 7. Must know / should know / nice to know
-
-## Must know
-- what Discovery is
-- what Research is
-- difference between problem and solution
-- difference between assumptions and evidence
-- why user interviews matter
-- why usability testing matters
-- what a hypothesis is
-- what a pain point is
-- basic idea of synthesis
-- how findings influence design decisions
-
-## Should know
-- Jobs To Be Done (JTBD)
-- segmentation
-- qualitative vs quantitative research
-- competitor analysis
-- basic survey design
-- heuristic evaluation
-- how research informs prioritization
-- how findings connect to product metrics
-
-## Nice to know
-- diary studies
-- card sorting
-- field studies
-- advanced mixed-method research
-- research ops
-- bias mitigation frameworks
-- triangulation methods in product teams
-
----
-
-## 8. Main methods you need to recognize
-
-You do not need mastery in all of them at once, but you should know what they are for.
-
-### User interviews
-Used to understand:
-- goals,
-- motivations,
-- frustrations,
-- mental models,
-- current behavior.
-
-Best for:
-- problem understanding,
-- discovery,
-- early exploration.
-
-### Usability testing
-Used to observe whether a user can actually complete tasks in an interface or prototype.
-
-Best for:
-- testing flows,
-- detecting confusion,
-- identifying friction.
-
-### Surveys
-Used to collect broader but usually shallower input from many people.
-
-Best for:
-- patterns at scale,
-- quick signals,
-- supporting qualitative work.
-
-### Product analytics
-Used to see what people actually do:
-- drop-offs,
-- completion rates,
-- repeated failures,
-- adoption patterns.
-
-Best for:
-- validating behavior at scale,
-- identifying where to investigate.
-
-### Competitor / comparative analysis
-Used to understand:
-- how others solve similar problems,
-- which patterns are common,
-- what expectations users may already have.
-
-Best for:
-- context,
-- inspiration,
-- identifying norms and differentiators.
-
-### Heuristic evaluation
-Expert review of an interface against usability principles.
-
-Best for:
-- early critique,
-- structured review,
-- quick identification of common UX problems.
-
----
-
-## 9. Discovery and Research in the product lifecycle
-
-A useful mental model:
-
-### Before design
-You try to understand:
-- what problem exists,
-- whether it matters,
-- who it affects,
-- what assumptions the team has.
-
-### During design
-You check:
-- whether the structure makes sense,
-- whether the prototype is understandable,
-- whether users can complete tasks.
-
-### After release
-You check:
-- whether people actually use it,
-- whether the problem improved,
-- where people still fail,
-- whether a redesign or iteration is needed.
-
----
-
-## 10. Inputs and outputs
-
-### Typical inputs
-- stakeholder requests
-- business goals
-- user complaints
-- analytics signals
-- support tickets
-- product ideas
-- market pressure
-- competitor movement
-
-### Typical outputs
-- problem statements
-- user pain points
-- hypotheses
-- insights
-- opportunity areas
-- research summaries
-- validated / invalidated assumptions
-- design directions
-- prioritization input
-
-This is important:
-**Research does not end in “interesting notes”.**  
-It should influence product decisions.
-
----
-
-## 11. Common beginner mistakes
-
-### Mistake 1. Starting with the solution
-“I will design a better screen first.”
-
-The better move:
-- first ask what problem this screen is supposed to solve.
-
-### Mistake 2. Asking leading questions
-Instead of:
-- “Would you like a simpler setup?”
-ask:
-- “Tell me how you currently set up your workout.”
-- “What feels difficult or slow?”
-
-### Mistake 3. Confusing opinions with behavior
-What users say they do and what they actually do are not always the same.
-
-### Mistake 4. Treating one user as the whole market
-One interview is insight material, not universal truth.
-
-### Mistake 5. Researching without a question
-If you do not know what you are trying to learn, research becomes chaotic.
-
-### Mistake 6. Collecting data without synthesis
-Gathering notes is not enough.  
-You must extract patterns and implications.
-
-### Mistake 7. Using research as decoration
-Research is useless if it does not affect decisions, priorities, or design choices.
-
-### Mistake 8. Only doing qualitative or only quantitative work
-Strong decisions usually improve when multiple evidence types support each other.
-
----
-
-## 12. Questions to ask yourself
-
-- What problem are we trying to understand?
-- How do we know this problem exists?
-- Are we looking at assumptions or evidence?
-- Who exactly is affected by this issue?
-- What behavior suggests there is friction?
-- What method fits this question best?
-- What finding would change our decision?
-- What are we trying to validate?
-- How will research influence design or product direction?
-
----
-
-## 13. Signs of mastery
-
-A stronger beginner / growing designer can:
-
-- separate a problem from a proposed solution,
-- write a simple research goal,
-- choose a reasonable method,
-- ask non-leading questions,
-- summarize findings into patterns,
-- turn findings into design implications,
-- explain what is evidence and what is assumption,
-- connect insights to product decisions.
-
-A more mature Product Designer can also:
-
-- combine qualitative and quantitative signals,
-- define research priorities,
-- align research with business goals,
-- detect false problems,
-- prevent wasted delivery,
-- use findings to influence roadmap thinking.
-
----
-
-## 14. How this connects to WOTimer
-
-Your first case, **WOTimer**, is an ideal learning environment for Discovery and Research.
-
-You can ask:
-
-### Problem discovery
-- What problem does WOTimer solve for lifters or trainees?
-- Is the problem only “timer exists”, or is it actually “tempo work is hard to structure and follow during training”?
-- Who is this timer for: beginners, strength athletes, rehab training, coaches?
-
-### User understanding
-- What is difficult in existing workout timers?
-- What do users need while actively training?
-- What information must be visible immediately?
-- What interrupts concentration during a set?
-
-### Assumptions
-Possible assumptions:
-- users may get confused by too many phase settings;
-- users may not understand tempo logic immediately;
-- audio cues may be more important than visual cues during active training;
-- creating a workout may feel too slow.
-
-### Research opportunities
-Even at beginner level, you can do simple research:
-- interview a few lifters or trainees,
-- compare existing interval timer apps,
-- test your flow with a small prototype,
-- observe whether users understand phase setup,
-- note where they hesitate.
-
-### Design implications
-Research might reveal:
-- setup needs simplification,
-- defaults matter more than flexibility,
-- onboarding is necessary,
-- labels need to be clearer,
-- session feedback should be stronger.
-
-This is exactly how Product Design grows from real evidence.
-
----
-
-## 15. Related nodes for your Obsidian graph
+# 17. Связанные узлы
 
 - [[Product Design]]
-- [[UX_UI]]
 - [[Product Thinking]]
+- [[UX_UI]]
 - [[Metrics and Analytics]]
 - [[Delivery Mindset]]
 - [[Design System]]
+- [[Business Context]]
 - [[Full Product Designer Workflow]]
 - [[WOTimer Case]]
-- [[User Interviews]]
-- [[Usability Testing]]
-- [[Hypotheses]]
-- [[Problem Statement]]
-- [[JTBD]]
-- [[Competitive Analysis]]
 
 ---
 
-## 16. Mini-case example
+# 18. Что изучать дальше отсюда
 
-### Weak approach
-“We need a better workout timer screen.”
-
-### Better discovery framing
-“Some users may struggle to configure training phases quickly before starting a session.  
-We need to understand whether setup complexity reduces session starts or creates confusion.”
-
-### Better research question
-“How do users currently prepare interval or tempo workouts, and where do they hesitate when configuring phases?”
-
-### Better design implication
-“If users consistently hesitate at phase naming or time logic, we may need to reduce setup complexity, add sensible defaults, or improve wording and structure.”
-
-This is the difference between random interface work and Product Design thinking.
-
----
-
-## 17. Self-check
-
-Can I explain:
-- what Discovery is?
-- what Research is?
-- how they differ?
-- why not every stakeholder request should immediately become a design task?
-- why evidence matters before choosing a solution?
-- how WOTimer could benefit from user interviews or usability testing?
-
-If not, this node is not yet internalized.
-
----
-
-## 18. Typical one-sentence summary
-
-**Discovery and Research help a Product Designer understand the right problem, the real user context, and the evidence needed to make better product decisions.**
-
----
-
-## 19. What to study next from here
-
-After this node, the most logical next nodes are:
+После этой заметки логично идти в:
 
 1. [[Metrics and Analytics]]
 2. [[Delivery Mindset]]
-3. [[User Interviews]]
-4. [[Usability Testing]]
-5. [[Problem Statement]]
-6. [[Hypotheses]]
+3. [[Full Product Designer Workflow]]
+
+А также постепенно создавать подзаметки:
+- [[User Interview]]
+- [[Usability Testing]]
+- [[Competitive Analysis]]
+- [[Heuristic Evaluation]]
+- [[Problem Statement]]
+- [[Hypothesis]]
+- [[Insight]]
 
 ---
 
-## 20. Status note
+# 19. Краткое ядро заметки
 
-You do not need to master formal research at once.  
-At your stage, the goal is to understand:
+Discovery and Research — это блок Product Design, который помогает понять:
 
-- what question you are trying to answer,
-- what method can help,
-- what evidence you actually have,
-- how findings influence product decisions.
+- что за проблема существует;
+- у кого она возникает;
+- почему она важна;
+- откуда мы это знаем;
+- что стоит делать дальше.
 
-That is already a strong shift toward Product Design thinking.
+Он нужен, чтобы не проектировать решения вслепую.
+
+Если кратко:
+- **Discovery** ищет и уточняет проблему.
+- **Research** собирает и объясняет сигналы.
+- Вместе они уменьшают неопределённость и улучшают качество продуктовых решений.
