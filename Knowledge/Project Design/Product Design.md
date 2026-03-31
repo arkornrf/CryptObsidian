@@ -43,8 +43,8 @@ Product Design — это системное проектирование циф
 ## Что входит в Product Design
 
 ### Обязательное ядро
-- [[UX UI]]
-- [[Product Thinking]]
+- [[UX_UI]]
+- [[Product_Thinking]]
 - [[Discovery and Research]]
 - [[Metrics and Analytics]]
 - [[Delivery Mindset]]
