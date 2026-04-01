@@ -1,3 +1,21 @@
+---
+title: Metrics and Analytics
+type: hub / concept / reference
+status: draft
+level: must know
+parent: "[[Product Design]]"
+tags:
+  - product-thinking
+  - discovery-and-research
+  - UX_UI
+  - delivery-mindset
+  - business-context
+  - artifacts
+  - hub
+  - must-know
+  - wotimer-case
+---
+
 # Metrics and Analytics
 
 **Type:** hub / concept / reference  
