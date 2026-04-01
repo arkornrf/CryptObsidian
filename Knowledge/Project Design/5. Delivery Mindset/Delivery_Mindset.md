@@ -1,9 +1,30 @@
+---
+title: Metrics and Analytics
+type: hub / concept / process / reference
+status: draft
+level: must know
+parent: "[[Product Design]]"
+tags:
+  - UX_UI
+  - product-thinking
+  - discovery-and-research
+  - metrics-and-analytics
+  - design-system
+  - collaboration
+  - artifacts
+  - business-context
+  - hub
+  - must-know
+  - wotimer-case
+---
+
+
 # Delivery Mindset
 
 **Type:** hub / concept / process / reference  
 **Level:** must know  
 **Domain:** [[Product Design]]  
-**Related:** [[UX_UI]], [[Product Thinking]], [[Discovery and Research]], [[Metrics and Analytics]], [[Design System]], [[Collaboration]], [[Artifacts]], [[Business Context]], [[WOTimer Case]]
+**Related:** [[UX_UI]], [[Product_Thinking]], [[Discovery_and_Research]], [[Metrics_and_Analytics]], [[Design_System]], [[Collaboration]], [[Artifacts]], [[Business_Context]], [[WOTimer_Case]]
 
 ---
 
