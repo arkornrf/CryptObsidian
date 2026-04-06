@@ -717,7 +717,7 @@ Product Design Workflow:
 
 # Как это связано с другими узлами
 
-- [[Product_Design_Hub_Skeleton]]
+- [[Product Design]]
 - [[UX_UI]]
 - [[Product_Thinking]]
 - [[Discovery_and_Research]]

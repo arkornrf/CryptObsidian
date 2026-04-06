@@ -297,18 +297,6 @@ Product Design — это системное проектирование циф
 
 ---
 
-## Следующие узлы для создания
-1. [[UX UI]]
-2. [[Product Thinking]]
-3. [[Discovery and Research]]
-4. [[Metrics and Analytics]]
-5. [[Delivery Mindset]]
-6. [[Design System]]
-7. [[Full Product Designer Workflow]]
-8. [[WOTimer Case]]
-
----
-
 ## Связанные заметки
 - [[Career Map Product Designer]]
 - [[Portfolio Logic]]
