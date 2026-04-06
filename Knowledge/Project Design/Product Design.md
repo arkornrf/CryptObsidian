@@ -46,13 +46,13 @@ Product Design — это системное проектирование циф
 - [[UX_UI]]
 - [[Product_Thinking]]
 - [[Discovery_and_Research]]
-- [[Metrics and Analytics]]
-- [[Delivery Mindset]]
-- [[Design System]]
+- [[Metrics_and_Analytics]]
+- [[Delivery_Mindset]]
+- [[Design_System]]
 - [[Collaboration]]
-- [[Business Context]]
+- [[Business_Context]]
 - [[Artifacts]]
-- [[Full Product Designer Workflow]]
+- [[Full_Product_Designer_Workflow]]
 
 ---
 
