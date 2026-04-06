@@ -3,7 +3,7 @@
 **Type:** hub / concept / process / reference  
 **Level:** must know  
 **Domain:** [[Product Design]]  
-**Related:** [[UX_UI]], [[Product_Thinking]], [[Discovery_and_Research]], [[Metrics_and_Analytics]], [[Delivery_Mindset]], [[Collaboration]], [[Artifacts]], [[Business_Context]], [[WOTimer Case]]
+**Related:** [[UX+UI]], [[Product Thinking]], [[Discovery and Research]], [[Metrics and Analytics]], [[Delivery Mindset]], [[Collaboration]], [[Artifacts]], [[Business Context]], [[WOTimer Case]]
 
 ---
 
@@ -329,7 +329,7 @@ Design System добавляет:
 Design System — один из важнейших инструментов Product Designer.
 
 Он напрямую поддерживает:
-- [[UX_UI]] — через консистентность интерфейса;
+- [[UX+UI]] — через консистентность интерфейса;
 - [[Delivery Mindset]] — через ускорение handoff и реализации;
 - [[Product Thinking]] — через понимание, когда нужен новый элемент, а когда достаточно системного решения;
 - [[Collaboration]] — через общий язык команды;

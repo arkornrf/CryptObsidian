@@ -115,8 +115,8 @@ tags:
 - отделяет симптом от корневой проблемы.
 
 ## Какие узлы здесь связаны
-- [[Business_Context]]
-- [[Product_Thinking]]
+- [[Business Context]]
+- [[Product Thinking]]
 - [[Collaboration]]
 
 ## Главный результат этапа
@@ -161,9 +161,9 @@ tags:
 - изучение поддержки, отзывов, жалоб.
 
 ## Какие узлы здесь связаны
-- [[Discovery_and_Research]]
-- [[Metrics_and_Analytics]]
-- [[Product_Thinking]]
+- [[Discovery and Research]]
+- [[Metrics and Analytics]]
+- [[Product Thinking]]
 
 ## Главный результат этапа
 Есть **доказательное понимание проблемы**, а не интуитивная догадка.
@@ -201,10 +201,10 @@ tags:
 - согласовывает success criteria.
 
 ## Какие узлы здесь связаны
-- [[Product_Thinking]]
-- [[Business_Context]]
+- [[Product Thinking]]
+- [[Business Context]]
 - [[Artifacts]]
-- [[Metrics_and_Analytics]]
+- [[Metrics and Analytics]]
 
 ## Главный результат этапа
 Команда понимает:
@@ -249,10 +249,10 @@ tags:
 - думает о системности решения.
 
 ## Какие узлы здесь связаны
-- [[UX_UI]]
-- [[Design_System]]
+- [[UX+UI]]
+- [[Design System]]
 - [[Artifacts]]
-- [[Product_Thinking]]
+- [[Product Thinking]]
 
 ## Главный результат этапа
 Появляется **структурированное и понятное решение**, которое можно обсуждать и проверять.
@@ -285,10 +285,10 @@ tags:
 - проверяет, соответствует ли решение исходной проблеме.
 
 ## Какие узлы здесь связаны
-- [[Discovery_and_Research]]
-- [[UX_UI]]
+- [[Discovery and Research]]
+- [[UX+UI]]
 - [[Artifacts]]
-- [[Product_Thinking]]
+- [[Product Thinking]]
 
 ## Главный результат этапа
 Решение проходит **осмысленную проверку**, а не уходит в реализацию вслепую.
@@ -323,9 +323,9 @@ tags:
 - помогает переводить дизайн в инженерную логику.
 
 ## Какие узлы здесь связаны
-- [[Delivery_Mindset]]
+- [[Delivery Mindset]]
 - [[Collaboration]]
-- [[Design_System]]
+- [[Design System]]
 - [[Artifacts]]
 
 ## Главный результат этапа
@@ -355,8 +355,8 @@ tags:
 - фиксирует то, что стоит улучшить после запуска.
 
 ## Какие узлы здесь связаны
-- [[Delivery_Mindset]]
-- [[Design_System]]
+- [[Delivery Mindset]]
+- [[Design System]]
 - [[Collaboration]]
 
 ## Главный результат этапа
@@ -388,9 +388,9 @@ tags:
 - помогает интерпретировать цифры через призму пользовательского опыта.
 
 ## Какие узлы здесь связаны
-- [[Metrics_and_Analytics]]
-- [[Business_Context]]
-- [[Product_Thinking]]
+- [[Metrics and Analytics]]
+- [[Business Context]]
+- [[Product Thinking]]
 
 ## Главный результат этапа
 Команда понимает:
@@ -429,10 +429,10 @@ Product Design не заканчивается на первом запуске.
 - возвращается к discovery или definition при необходимости.
 
 ## Какие узлы здесь связаны
-- [[Product_Thinking]]
-- [[Metrics_and_Analytics]]
-- [[Discovery_and_Research]]
-- [[Delivery_Mindset]]
+- [[Product Thinking]]
+- [[Metrics and Analytics]]
+- [[Discovery and Research]]
+- [[Delivery Mindset]]
 
 ## Главный результат этапа
 Продукт развивается как живая система, а не как “раз и навсегда сделанный интерфейс”.
@@ -468,7 +468,7 @@ Product Design не заканчивается на первом запуске.
 
 ## Какие узлы здесь связаны
 - [[Artifacts]]
-- [[Design_System]]
+- [[Design System]]
 - [[Collaboration]]
 
 ## Главный результат этапа
@@ -718,14 +718,14 @@ Product Design Workflow:
 # Как это связано с другими узлами
 
 - [[Product Design]]
-- [[UX_UI]]
-- [[Product_Thinking]]
-- [[Discovery_and_Research]]
-- [[Metrics_and_Analytics]]
-- [[Delivery_Mindset]]
-- [[Design_System]]
+- [[UX+UI]]
+- [[Product Thinking]]
+- [[Discovery and Research]]
+- [[Metrics and Analytics]]
+- [[Delivery Mindset]]
+- [[Design System]]
 - [[Collaboration]]
-- [[Business_Context]]
+- [[Business Context]]
 - [[Artifacts]]
 - [[WOTimer_Case]]
 
@@ -834,5 +834,5 @@ Product Design Workflow:
 - [[Design_Spec]]
 - [[Success_Criteria]]
 - [[Decision_Log]]
-- [[Discovery_and_Research]]
-- [[Metrics_and_Analytics]]
+- [[Discovery and Research]]
+- [[Metrics and Analytics]]

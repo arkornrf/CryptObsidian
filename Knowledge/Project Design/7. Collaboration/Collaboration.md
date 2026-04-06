@@ -3,7 +3,7 @@
 **Type:** hub / concept / process / reference  
 **Level:** must know  
 **Domain:** [[Product Design]]  
-**Related:** [[UX_UI]], [[Product Thinking]], [[Discovery_and_Research]], [[Metrics_and_Analytics]], [[Delivery_Mindset]], [[Design_System]], [[Business_Context]], [[Artifacts]], [[Full_Product_Designer_Workflow]], [[WOTimer Case]]
+**Related:** [[UX+UI]], [[Product Thinking]], [[Discovery and Research]], [[Metrics and Analytics]], [[Delivery Mindset]], [[Design System]], [[Business Context]], [[Artifacts]], [[Full Product Designer Workflow]], [[WOTimer Case]]
 
 ---
 
@@ -541,7 +541,7 @@ Collaboration связывает почти все домены Product Design.
 # 14. Связанные заметки для дальнейшего развития
 
 - [[Product Design]]
-- [[UX_UI]]
+- [[UX+UI]]
 - [[Product Thinking]]
 - [[Discovery and Research]]
 - [[Metrics and Analytics]]

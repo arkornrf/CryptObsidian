@@ -21,7 +21,7 @@ tags:
 **Type:** hub / concept / reference  
 **Level:** must know  
 **Domain:** [[Product Design]]  
-**Related:** [[Product Thinking]], [[Discovery and Research]], [[UX_UI]], [[Delivery Mindset]], [[Business Context]], [[Artifacts]], [[WOTimer Case]]
+**Related:** [[Product Thinking]], [[Discovery and Research]], [[UX+UI]], [[Delivery Mindset]], [[Business Context]], [[Artifacts]], [[WOTimer Case]]
 
 ---
 
@@ -322,7 +322,7 @@ Metrics and Analytics помогают проверить:
 Discovery отвечает за понимание проблемы.
 Analytics помогает увидеть, как проблема проявляется в поведении и масштабе.
 
-## Связь с [[UX_UI]]
+## Связь с [[UX+UI]]
 UX/UI формируют решение.
 Metrics and Analytics помогают понять, удобно ли оно и работает ли оно.
 

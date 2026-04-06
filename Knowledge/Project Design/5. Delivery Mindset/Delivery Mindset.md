@@ -24,7 +24,7 @@ tags:
 **Type:** hub / concept / process / reference  
 **Level:** must know  
 **Domain:** [[Product Design]]  
-**Related:** [[UX_UI]], [[Product_Thinking]], [[Discovery_and_Research]], [[Metrics_and_Analytics]], [[Design_System]], [[Collaboration]], [[Artifacts]], [[Business_Context]], [[WOTimer_Case]]
+**Related:** [[UX+UI]], [[Product Thinking]], [[Discovery and Research]], [[Metrics and Analytics]], [[Design System]], [[Collaboration]], [[Artifacts]], [[Business Context]], [[WOTimer_Case]]
 
 ---
 
@@ -495,7 +495,7 @@ Delivery Mindset — это не “сдал макет и ушёл”, а:
 
 # 14. Как это связано с другими узлами
 
-## Связь с [[UX_UI]]
+## Связь с [[UX+UI]]
 UX/UI отвечает за качество интерфейса и опыта.  
 Delivery Mindset добавляет реалистичность и полноту исполнения.
 

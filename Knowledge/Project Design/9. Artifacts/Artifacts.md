@@ -54,14 +54,14 @@ Product Designer работает не только идеями в голове
 
 Artifacts сопровождают **весь цикл Product Design**:
 
-- в [[Discovery_and_Research]] — чтобы зафиксировать проблему и находки;
-- в [[Product_Thinking]] — чтобы оформить гипотезы и логику решения;
-- в [[UX_UI]] — чтобы показать структуру, флоу и интерфейс;
-- в [[Design_System]] — чтобы закрепить правила и компоненты;
-- в [[Delivery_Mindset]] — чтобы передать решение в разработку;
-- в [[Metrics_and_Analytics]] — чтобы понимать, как оценивать результат;
+- в [[Discovery and Research]] — чтобы зафиксировать проблему и находки;
+- в [[Product Thinking]] — чтобы оформить гипотезы и логику решения;
+- в [[UX+UI]] — чтобы показать структуру, флоу и интерфейс;
+- в [[Design System]] — чтобы закрепить правила и компоненты;
+- в [[Delivery Mindset]] — чтобы передать решение в разработку;
+- в [[Metrics and Analytics]] — чтобы понимать, как оценивать результат;
 - в [[Collaboration]] — чтобы синхронизировать участников;
-- в [[Business_Context]] — чтобы показать связь с целью бизнеса.
+- в [[Business Context]] — чтобы показать связь с целью бизнеса.
 
 ---
 
@@ -548,16 +548,16 @@ Artifacts сопровождают **весь цикл Product Design**:
 
 # Как это связано с другими узлами
 
-- [[Product_Design_Hub_Skeleton]]
-- [[UX_UI]]
-- [[Product_Thinking]]
-- [[Discovery_and_Research]]
-- [[Metrics_and_Analytics]]
-- [[Delivery_Mindset]]
-- [[Design_System]]
+- [[Product Design]]
+- [[UX+UI]]
+- [[Product Thinking]]
+- [[Discovery and Research]]
+- [[Metrics and Analytics]]
+- [[Delivery Mindset]]
+- [[Design System]]
 - [[Collaboration]]
-- [[Business_Context]]
-- [[Full_Product_Designer_Workflow]]
+- [[Business Context]]
+- [[Full Product Designer Workflow]]
 - [[WOTimer_Case]]
 
 ---
@@ -649,7 +649,7 @@ Artifacts сопровождают **весь цикл Product Design**:
 
 После этого узла особенно полезно изучать:
 
-- [[Full_Product_Designer_Workflow]]
+- [[Full Product Designer Workflow]]
 - [[Problem_Statement]]
 - [[User_Flow]]
 - [[Wireframe]]

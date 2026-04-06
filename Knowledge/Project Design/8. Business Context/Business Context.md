@@ -3,7 +3,7 @@
 **Type:** hub / concept / framework / reference
 **Level:** must know  
 **Domain:** [[Product Design]]  
-**Related:** [[Product_Thinking]], [[UX_UI]], [[Discovery_and_Research]], [[Metrics_and_Analytics]], [[Delivery_Mindset]], [[Collaboration]], [[Design_System]], [[Artifacts]], [[Full_Product_Designer_Workflow]], [[WOTimer Case]]
+**Related:** [[Product Thinking]], [[UX+UI]], [[Discovery and Research]], [[Metrics and Analytics]], [[Delivery Mindset]], [[Collaboration]], [[Design System]], [[Artifacts]], [[Full Product Designer Workflow]], [[WOTimer Case]]
 
 ---
 
@@ -165,7 +165,7 @@ Designer не обязан быть финансистом, но должен п
 
 Связанные узлы:
 - [[Positioning]]
-- [[UX_UI]]
+- [[UX+UI]]
 - [[Value Proposition]]
 
 ---
@@ -471,8 +471,8 @@ Business Context особенно тесно связан с:
 - [[Discovery and Research]] — потому что рынок, сегменты и ценность нельзя угадывать;
 - [[Metrics and Analytics]] — потому что влияние решения должно быть измеримым;
 - [[Collaboration]] — потому что бизнес-контекст часто приходит через PM, stakeholders и стратегию;
-- [[Delivery_Mindset]] — потому что ограничения и очередность реализации зависят от приоритета;
-- [[UX_UI]] — потому что позиционирование и value отражаются в пользовательском опыте и визуале.
+- [[Delivery Mindset]] — потому что ограничения и очередность реализации зависят от приоритета;
+- [[UX+UI]] — потому что позиционирование и value отражаются в пользовательском опыте и визуале.
 
 ---
 

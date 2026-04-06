@@ -156,12 +156,12 @@ UX/UI внутри Product Design отвечают за:
 - связность взаимодействия.
 
 Но Product Design добавляет ещё:
-- [[Product_Thinking]];
-- [[Discovery_and_Research]];
-- [[Metrics_and_Analytics]];
-- [[Delivery_Mindset]];
-- [[Business_Context]];
-- [[Design_System]];
+- [[Product Thinking]];
+- [[Discovery and Research]];
+- [[Metrics and Analytics]];
+- [[Delivery Mindset]];
+- [[Business Context]];
+- [[Design System]];
 - [[Collaboration]].
 
 > Формула: **UX/UI = фундамент интерфейса**, а **Product Design = фундамент интерфейса + продуктовая логика + бизнес-контекст + работа с реализацией**.
@@ -327,11 +327,11 @@ UX — это не только схема экранов, а целостный
 
 ## Ведёт в
 - [[Product Design]]
-- [[Product_Thinking]]
-- [[Discovery_and_Research]]
-- [[Metrics_and_Analytics]]
-- [[Delivery_Mindset]]
-- [[Design_System]]
+- [[Product Thinking]]
+- [[Discovery and Research]]
+- [[Metrics and Analytics]]
+- [[Delivery Mindset]]
+- [[Design System]]
 
 ## Особенно тесно связан с
 - [[User Flows]]
