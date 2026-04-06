@@ -133,7 +133,7 @@ Product Design — это системное проектирование циф
 - [[Iteration]]
 - [[Design in Real Development]]
 
-### 6. Design System
+### 6. [[Design_System]]
 Отвечает за системность, масштабируемость и единообразие интерфейса.
 
 Подтемы:
@@ -148,7 +148,7 @@ Product Design — это системное проектирование циф
 - [[Consistency]]
 - [[Scalability]]
 
-### 7. Collaboration
+### 7. [[Collaboration]]
 Отвечает за взаимодействие Product Designer с людьми и ролями вокруг продукта.
 
 Подтемы:
@@ -162,7 +162,7 @@ Product Design — это системное проектирование циф
 - [[Decision Making]]
 - [[Design Review]]
 
-### 8. Business Context
+### 8. [[Business_Context]]
 Отвечает за понимание продукта как части рынка и бизнеса.
 
 Подтемы:
@@ -176,7 +176,7 @@ Product Design — это системное проектирование циф
 - [[Business Value]]
 - [[User Value vs Business Value]]
 
-### 9. Artifacts
+### 9. [[Artifacts]]
 Отвечает за материальные результаты работы Product Designer.
 
 Подтемы:
@@ -190,7 +190,7 @@ Product Design — это системное проектирование циф
 - [[Metrics Snapshot]]
 - [[Case Study Structure]]
 
-### 10. Full Product Designer Workflow
+### 10. [[Full_Product_Designer_Workflow]]
 Верхнеуровневый узел, объединяющий все блоки в единую последовательность.
 
 Подтемы:
