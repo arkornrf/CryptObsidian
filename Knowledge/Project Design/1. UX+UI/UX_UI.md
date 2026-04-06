@@ -327,11 +327,11 @@ UX — это не только схема экранов, а целостный
 
 ## Ведёт в
 - [[Product Design]]
-- [[Product Thinking]]
-- [[Discovery and Research]]
-- [[Metrics and Analytics]]
-- [[Delivery Mindset]]
-- [[Design System]]
+- [[Product_Thinking]]
+- [[Discovery_and_Research]]
+- [[Metrics_and_Analytics]]
+- [[Delivery_Mindset]]
+- [[Design_System]]
 
 ## Особенно тесно связан с
 - [[User Flows]]
