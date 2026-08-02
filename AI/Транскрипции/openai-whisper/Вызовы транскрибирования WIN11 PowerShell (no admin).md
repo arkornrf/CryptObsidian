@@ -10,3 +10,5 @@
 ```
 python -m whisper ".\название_файла.формат" --model large-v3 --language ru --task transcribe --device cuda --fp16 True --output_format all --output_dir .\out --initial_prompt $PROMPT
 ```
+
+# Обработка одного файла:
