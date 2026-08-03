@@ -11,21 +11,27 @@
 python -m whisper ".\название_файла.формат" --model large-v3 --language ru --task transcribe --device cuda --fp16 True --output_format all --output_dir .\out --initial_prompt $PROMPT
 ```
 
-# Whisper large-v3 — быстрый запуск в PowerShell
+# Whisper large-v3 — надёжный запуск в Windows PowerShell
 
-> [!important] Какой движок запускается  
-> Команда `python -m whisper` относится к **оригинальному OpenAI Whisper на PyTorch**, а не непосредственно к `faster-whisper` на CTranslate2. У `faster-whisper` другой Python-интерфейс через `WhisperModel`, хотя модели и общая логика транскрибации похожи. Эта памятка составлена именно под уже проверенный мной запуск:
+## Главное правило
+
+> [!danger] Не вставлять большой скрипт прямо в PowerShell  
+> Многострочный блок может попасть в консоль как одна строка. Тогда исчезают необходимые разделители команд, свойств и конструкций PowerShell.
 > 
-> ```powershell
-> python -m whisper
+> В консоль вставляются только короткие однострочные команды.
+> 
+> Основной код сохраняется в:
+> 
+> ```text
+> transcribe_wow_guides.ps1
 > ```
 
 ---
 
-## 1. Структура рабочей папки
+# 1. Структура папки
 
 ```text
-WoW-PvP-Transcription\
+D:\WOW Builds\Guides\
 │
 ├── initial_prompt.txt
 ├── 01_hydramist_prompt.txt
@@ -36,149 +42,99 @@ WoW-PvP-Transcription\
 ├── 02_cdew_keybindings.mkv
 ├── 03_cdew_arena_movement.mkv
 │
-└── out\
+└── transcribe_wow_guides.ps1
 ```
 
-- `initial_prompt.txt` — общий контекст для всех трёх видео.
-    
-- Три остальных `.txt` — индивидуальный контекст конкретного видео.
-    
-- `.webm` и `.mkv` переименовывать в `.mp4` не нужно.
-    
-- Whisper передаёт медиафайл в FFmpeg, поэтому главное — наличие корректной аудиодорожки и установленного FFmpeg.
-    
+Папку `out` заранее создавать необязательно — скрипт создаст её сам.
 
 ---
 
-# 2. Как открыть PowerShell в нужной папке
+# 2. Открытие PowerShell в нужной папке
 
-## Способ 1 — через Проводник
+## Через Проводник Windows 11
 
-1. Открыть рабочую папку в Проводнике.
+Открыть папку:
+
+```text
+D:\WOW Builds\Guides
+```
+
+Затем:
+
+1. Щёлкнуть правой кнопкой мыши по пустому месту.
     
-2. Щёлкнуть по адресной строке.
+2. Выбрать **Открыть в терминале**.
     
-3. Ввести:
-    
+
+Либо щёлкнуть по адресной строке Проводника, написать:
 
 ```text
 powershell
 ```
 
-4. Нажать `Enter`.
-    
-
-PowerShell откроется сразу в текущей папке.
-
-Также в Windows 11 можно нажать правой кнопкой мыши по свободному месту папки и выбрать:
-
-```text
-Открыть в терминале
-```
+и нажать `Enter`.
 
 ---
 
-## Способ 2 — перейти из уже открытого PowerShell
+## Из уже открытого PowerShell
 
-Полная команда:
-
-```powershell
-Set-Location -LiteralPath "D:\WoW-PvP-Transcription"
-```
-
-Короткий эквивалент:
+Вставить одной строкой:
 
 ```powershell
-cd "D:\WoW-PvP-Transcription"
+cd "D:\WOW Builds\Guides"
 ```
 
-Путь с пробелами обязательно заключать в кавычки:
-
-```powershell
-cd "D:\Видео и транскрибации\WoW PvP"
-```
-
----
-
-## Полезные команды навигации
-
-Текущая папка:
-
-```powershell
-Get-Location
-```
-
-Короткий вариант:
+Проверить текущую папку:
 
 ```powershell
 pwd
 ```
 
-Показать содержимое папки:
-
-```powershell
-Get-ChildItem
-```
-
-Короткий вариант:
+Показать файлы:
 
 ```powershell
 ls
 ```
 
-Перейти на один уровень выше:
-
-```powershell
-cd ..
-```
-
-Перейти в подпапку:
-
-```powershell
-cd ".\out"
-```
-
-Очистить окно PowerShell:
-
-```powershell
-cls
-```
+Путь заключён в кавычки, потому что содержит пробелы.
 
 ---
 
-# 3. Быстрая проверка перед запуском
+# 3. Быстрая проверка окружения
 
-Проверить Python:
+Каждая команда вставляется отдельно.
+
+Проверка Python:
 
 ```powershell
 python --version
 ```
 
-Проверить Whisper:
+Проверка Whisper:
 
 ```powershell
 python -m whisper --help
 ```
 
-Проверить FFmpeg:
+Проверка FFmpeg:
 
 ```powershell
 ffmpeg -version
 ```
 
-Проверить видеокарту и драйвер:
+Проверка видеокарты:
 
 ```powershell
 nvidia-smi
 ```
 
-Проверить доступность CUDA в PyTorch:
+Проверка CUDA в PyTorch:
 
 ```powershell
-python -c "import torch; print('CUDA:', torch.cuda.is_available()); print('GPU:', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'не обнаружена')"
+python -c "import torch; print('CUDA:', torch.cuda.is_available()); print('GPU:', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'not detected')"
 ```
 
-Нормальный результат:
+Ожидаемый результат:
 
 ```text
 CUDA: True
@@ -187,237 +143,32 @@ GPU: NVIDIA GeForce RTX 3060 Laptop GPU
 
 ---
 
-# 4. Создание папки результатов
+# 4. Создание файла скрипта
+
+Находясь в рабочей папке, выполнить одной строкой:
 
 ```powershell
-New-Item -ItemType Directory -Path ".\out" -Force | Out-Null
+notepad ".\transcribe_wow_guides.ps1"
 ```
 
-Короткий вариант:
+Если Блокнот спросит, создать ли новый файл, согласиться.
 
-```powershell
-mkdir ".\out" -ErrorAction SilentlyContinue | Out-Null
-```
+Вставить в Блокнот код из следующего раздела.
+
+> [!important]  
+> Этот код вставляется в Блокнот или другой текстовый редактор, а не непосредственно в окно PowerShell.
 
 ---
 
-# 5. Загрузка и объединение промптов
+# 5. Содержимое `transcribe_wow_guides.ps1`
 
-`--initial_prompt` принимает **сам текст**, а не путь к текстовому файлу.
-
-Неправильно:
+Скрипт специально не содержит русских букв. Поэтому он не должен ломаться даже при неудачно выбранной кодировке.
 
 ```powershell
---initial_prompt ".\initial_prompt.txt"
-```
+$ErrorActionPreference = "Stop"
 
-В этом случае Whisper получит только буквальный текст:
+Set-Location -LiteralPath $PSScriptRoot
 
-```text
-.\initial_prompt.txt
-```
-
-Нужно сначала прочитать общий и индивидуальный промпты, а затем объединить их.
-
-Выполнить один раз в текущем окне PowerShell:
-
-```powershell
-function Get-WhisperPrompt {
-    param(
-        [Parameter(Mandatory = $true)]
-        [string]$SpecificPromptFile
-    )
-
-    $basePrompt = Get-Content `
-        -LiteralPath ".\initial_prompt.txt" `
-        -Raw `
-        -Encoding UTF8
-
-    $specificPrompt = Get-Content `
-        -LiteralPath $SpecificPromptFile `
-        -Raw `
-        -Encoding UTF8
-
-    return $basePrompt.Trim() + "`n`n" + $specificPrompt.Trim()
-}
-```
-
-Пример загрузки промпта Hydramist:
-
-```powershell
-$PROMPT = Get-WhisperPrompt ".\01_hydramist_prompt.txt"
-```
-
-Посмотреть получившийся текст:
-
-```powershell
-$PROMPT
-```
-
-Проверить длину промпта:
-
-```powershell
-$PROMPT.Length
-```
-
-> [!note]  
-> Использовать переменную именно `$PROMPT`, а не `$PROMT`. Это разные имена переменных.
-
----
-
-# 6. Форма и параметры вызова Whisper
-
-## Общая форма команды
-
-```powershell
-python -m whisper `
-    "<путь_к_видео>" `
-    --model <модель> `
-    --language <язык> `
-    --task <задача> `
-    --device <устройство> `
-    --fp16 <True/False> `
-    --output_format <формат> `
-    --output_dir "<папка>" `
-    --word_timestamps <True/False> `
-    --initial_prompt "$PROMPT"
-```
-
-Символ обратного апострофа:
-
-```text
-`
-```
-
-переносит команду на следующую строку в PowerShell.
-
-После него не должно быть пробелов или комментариев. Иначе перенос может не сработать.
-
-Команду можно записать и в одну строку:
-
-```powershell
-python -m whisper ".\video.mkv" --model large-v3 --language en --task transcribe --device cuda --fp16 True --output_format all --output_dir ".\out" --word_timestamps True --initial_prompt "$PROMPT"
-```
-
----
-
-## Значение основных параметров
-
-|Параметр|Значение|Функция|
-|---|---|---|
-|`python -m whisper`|—|Запускает модуль OpenAI Whisper|
-|`".\video.mkv"`|путь|Входной видео- или аудиофайл|
-|`--model large-v3`|модель|Использует точную, но тяжёлую модель `large-v3`|
-|`--language en`|язык|Указывает, что речь в видео английская|
-|`--task transcribe`|задача|Оставляет транскрипт на исходном языке|
-|`--device cuda`|устройство|Запускает вычисления на NVIDIA GPU|
-|`--fp16 True`|точность|Использует FP16 на видеокарте|
-|`--output_format all`|формат|Сохраняет все доступные форматы результатов|
-|`--output_dir ".\out"`|папка|Указывает папку выгрузки|
-|`--word_timestamps True`|таймкоды|Добавляет временные данные отдельных слов|
-|`--initial_prompt "$PROMPT"`|контекст|Передаёт WoW-термины и контекст конкретного видео|
-
-OpenAI Whisper поддерживает `initial_prompt`, пословные таймкоды, выбор языка, задачи, папки и формата вывода через CLI.
-
----
-
-## Важные значения
-
-Для английских WoW-гайдов:
-
-```powershell
---language en
-```
-
-Не использовать:
-
-```powershell
---language ru
-```
-
-Для английского транскрипта:
-
-```powershell
---task transcribe
-```
-
-Не использовать `translate`, поскольку эта задача переводит речь в английский, а не создаёт русскую версию текста.
-
----
-
-# 7. Запуск одного видео
-
-## Hydramist
-
-Сначала сформировать промпт:
-
-```powershell
-$PROMPT = Get-WhisperPrompt ".\01_hydramist_prompt.txt"
-```
-
-Затем запустить:
-
-```powershell
-python -m whisper `
-    ".\01_hydramist_macros_keybinds.webm" `
-    --model large-v3 `
-    --language en `
-    --task transcribe `
-    --device cuda `
-    --fp16 True `
-    --output_format all `
-    --output_dir ".\out" `
-    --word_timestamps True `
-    --initial_prompt "$PROMPT"
-```
-
----
-
-## Cdew — Keybindings
-
-```powershell
-$PROMPT = Get-WhisperPrompt ".\02_cdew_keybindings_prompt.txt"
-
-python -m whisper `
-    ".\02_cdew_keybindings.mkv" `
-    --model large-v3 `
-    --language en `
-    --task transcribe `
-    --device cuda `
-    --fp16 True `
-    --output_format all `
-    --output_dir ".\out" `
-    --word_timestamps True `
-    --initial_prompt "$PROMPT"
-```
-
----
-
-## Cdew — Arena Movement
-
-```powershell
-$PROMPT = Get-WhisperPrompt ".\03_cdew_movement_prompt.txt"
-
-python -m whisper `
-    ".\03_cdew_arena_movement.mkv" `
-    --model large-v3 `
-    --language en `
-    --task transcribe `
-    --device cuda `
-    --fp16 True `
-    --output_format all `
-    --output_dir ".\out" `
-    --word_timestamps True `
-    --initial_prompt "$PROMPT"
-```
-
----
-
-# 8. Автоматический запуск всех трёх видео
-
-Скопировать весь блок в PowerShell:
-
-```powershell
 New-Item -ItemType Directory -Path ".\out" -Force | Out-Null
 
 function Get-WhisperPrompt {
@@ -426,242 +177,320 @@ function Get-WhisperPrompt {
         [string]$SpecificPromptFile
     )
 
-    $basePrompt = Get-Content `
-        -LiteralPath ".\initial_prompt.txt" `
-        -Raw `
-        -Encoding UTF8
+    $BasePromptFile = ".\initial_prompt.txt"
 
-    $specificPrompt = Get-Content `
-        -LiteralPath $SpecificPromptFile `
-        -Raw `
-        -Encoding UTF8
+    if (-not (Test-Path -LiteralPath $BasePromptFile)) {
+        throw "Base prompt file not found: $BasePromptFile"
+    }
+
+    if (-not (Test-Path -LiteralPath $SpecificPromptFile)) {
+        throw "Specific prompt file not found: $SpecificPromptFile"
+    }
+
+    $basePrompt = Get-Content -LiteralPath $BasePromptFile -Raw -Encoding UTF8
+    $specificPrompt = Get-Content -LiteralPath $SpecificPromptFile -Raw -Encoding UTF8
 
     return $basePrompt.Trim() + "`n`n" + $specificPrompt.Trim()
 }
 
 $jobs = @(
     [PSCustomObject]@{
-        Video  = ".\01_hydramist_macros_keybinds.webm"
+        Video = ".\01_hydramist_macros_keybinds.webm"
         Prompt = ".\01_hydramist_prompt.txt"
-    },
+    }
+
     [PSCustomObject]@{
-        Video  = ".\02_cdew_keybindings.mkv"
+        Video = ".\02_cdew_keybindings.mkv"
         Prompt = ".\02_cdew_keybindings_prompt.txt"
-    },
+    }
+
     [PSCustomObject]@{
-        Video  = ".\03_cdew_arena_movement.mkv"
+        Video = ".\03_cdew_arena_movement.mkv"
         Prompt = ".\03_cdew_movement_prompt.txt"
     }
 )
 
 foreach ($job in $jobs) {
     if (-not (Test-Path -LiteralPath $job.Video)) {
-        throw "Не найден видеофайл: $($job.Video)"
+        throw "Video file not found: $($job.Video)"
     }
 
-    if (-not (Test-Path -LiteralPath $job.Prompt)) {
-        throw "Не найден файл промпта: $($job.Prompt)"
-    }
-
-    $PROMPT = Get-WhisperPrompt $job.Prompt
+    $PROMPT = Get-WhisperPrompt -SpecificPromptFile $job.Prompt
 
     Write-Host ""
-    Write-Host "============================================="
-    Write-Host "Видео:  $($job.Video)"
-    Write-Host "Промпт: $($job.Prompt)"
-    Write-Host "============================================="
+    Write-Host "===================================================="
+    Write-Host "Starting video: $($job.Video)"
+    Write-Host "Prompt file:    $($job.Prompt)"
+    Write-Host "Prompt length:  $($PROMPT.Length) characters"
+    Write-Host "===================================================="
     Write-Host ""
 
-    python -m whisper `
-        $job.Video `
-        --model large-v3 `
-        --language en `
-        --task transcribe `
-        --device cuda `
-        --fp16 True `
-        --output_format all `
-        --output_dir ".\out" `
-        --word_timestamps True `
-        --initial_prompt "$PROMPT"
+    $whisperArgs = @(
+        "-m"
+        "whisper"
+        $job.Video
+        "--model"
+        "large-v3"
+        "--language"
+        "en"
+        "--task"
+        "transcribe"
+        "--device"
+        "cuda"
+        "--fp16"
+        "True"
+        "--output_format"
+        "all"
+        "--output_dir"
+        ".\out"
+        "--word_timestamps"
+        "True"
+        "--initial_prompt"
+        $PROMPT
+    )
+
+    & python @whisperArgs
 
     if ($LASTEXITCODE -ne 0) {
-        throw "Whisper завершился с ошибкой при обработке: $($job.Video)"
+        throw "Whisper failed while processing: $($job.Video)"
     }
 
     Write-Host ""
-    Write-Host "Готово: $($job.Video)"
+    Write-Host "Completed: $($job.Video)"
 }
 
 Write-Host ""
-Write-Host "Все три видео обработаны."
+Write-Host "===================================================="
+Write-Host "All three videos have been processed."
+Write-Host "Output directory: $PSScriptRoot\out"
+Write-Host "===================================================="
 ```
 
-Видео обрабатываются последовательно:
-
-```text
-Hydramist → Cdew Keybindings → Cdew Movement
-```
+В вызове Whisper аргументы помещены в массив `$whisperArgs`. Поэтому здесь не используются хрупкие обратные апострофы для переноса длинной команды.
 
 ---
 
-# 9. Сохранение автоматического запуска в `.ps1`
+# 6. Сохранение скрипта
 
-Создать файл:
+В Блокноте:
+
+```text
+Файл → Сохранить
+```
+
+Проверить, что файл называется:
 
 ```text
 transcribe_wow_guides.ps1
 ```
 
-Вставить в него блок автоматического запуска.
+а не:
 
-Запуск из рабочей папки:
-
-```powershell
-.\transcribe_wow_guides.ps1
+```text
+transcribe_wow_guides.ps1.txt
 ```
 
-Если PowerShell блокирует выполнение локальных скриптов:
+Если используется окно **Сохранить как**, выбрать:
+
+```text
+Тип файла: Все файлы
+Кодировка: UTF-8 с BOM
+```
+
+Поскольку сам код ASCII, он также будет корректно работать при сохранении как ANSI или обычный UTF-8.
+
+Файлы промптов могут оставаться в UTF-8: скрипт читает их с явным параметром:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File ".\transcribe_wow_guides.ps1"
+-Encoding UTF8
+```
+
+---
+
+# 7. Запуск скрипта
+
+В PowerShell вставить **одну строку**:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File ".\transcribe_wow_guides.ps1"
 ```
 
 Права администратора не нужны.
 
+`-ExecutionPolicy Bypass` применяется к запускаемому процессу PowerShell и позволяет выполнить локальный скрипт без постоянного изменения системной политики.
+
 ---
 
-# 10. Проверка MKV и WebM
+## Запуск из любой папки
 
-Показать информацию о первом файле:
-
-```powershell
-ffmpeg -hide_banner -i ".\01_hydramist_macros_keybinds.webm"
-```
-
-Для MKV:
+Можно указать полный путь:
 
 ```powershell
-ffmpeg -hide_banner -i ".\02_cdew_keybindings.mkv"
+powershell -NoProfile -ExecutionPolicy Bypass -File "D:\WOW Builds\Guides\transcribe_wow_guides.ps1"
 ```
 
-Нужно найти строку с аудиодорожкой, например:
+В начале скрипта есть:
+
+```powershell
+Set-Location -LiteralPath $PSScriptRoot
+```
+
+Поэтому скрипт самостоятельно переходит в папку, где находится сам `.ps1`, и находит расположенные рядом видео и промпты.
+
+---
+
+# 8. Что должно появиться после запуска
+
+В консоли:
 
 ```text
-Audio: opus, 48000 Hz, stereo
+Starting video: .\01_hydramist_macros_keybinds.webm
+Prompt file:    .\01_hydramist_prompt.txt
+Prompt length:  ... characters
+```
+
+После первого видео автоматически начнётся второе, затем третье.
+
+Результаты сохранятся в:
+
+```text
+D:\WOW Builds\Guides\out
+```
+
+---
+
+# 9. Форма и параметры вызова Whisper
+
+Фактически скрипт выполняет такую команду:
+
+```text
+python -m whisper <video> <parameters>
+```
+
+Основные параметры:
+
+|Параметр|Значение|Назначение|
+|---|--:|---|
+|`-m whisper`|—|Запускает установленный модуль OpenAI Whisper|
+|`--model large-v3`|`large-v3`|Выбирает модель распознавания|
+|`--language en`|английский|Указывает язык речи|
+|`--task transcribe`|транскрибация|Сохраняет текст на исходном языке|
+|`--device cuda`|NVIDIA GPU|Использует видеокарту|
+|`--fp16 True`|FP16|Уменьшает нагрузку и ускоряет расчёты на GPU|
+|`--output_format all`|все форматы|Создаёт доступные текстовые форматы результата|
+|`--output_dir .\out`|папка|Указывает место сохранения|
+|`--word_timestamps True`|включено|Добавляет пословные временные данные|
+|`--initial_prompt`|текст|Передаёт контекст и WoW-терминологию|
+
+`initial_prompt` и `word_timestamps` являются параметрами транскрибации OpenAI Whisper.
+
+---
+
+# 10. Как формируется промпт
+
+Для каждого видео скрипт соединяет:
+
+```text
+initial_prompt.txt
+```
+
+и индивидуальный файл:
+
+```text
+01_hydramist_prompt.txt
 ```
 
 или:
 
 ```text
-Audio: aac, 44100 Hz, stereo
+02_cdew_keybindings_prompt.txt
 ```
 
-Более чистая проверка:
-
-```powershell
-ffprobe `
-    -v error `
-    -select_streams a:0 `
-    -show_entries stream=codec_name,sample_rate,channels `
-    -of default=noprint_wrappers=1 `
-    ".\01_hydramist_macros_keybinds.webm"
-```
-
-Ожидаемый результат:
+или:
 
 ```text
-codec_name=opus
-sample_rate=48000
-channels=2
+03_cdew_movement_prompt.txt
+```
+
+Логика:
+
+```powershell
+$PROMPT = $basePrompt.Trim() + "`n`n" + $specificPrompt.Trim()
+```
+
+В Whisper передаётся уже готовый объединённый текст, а не пути к `.txt`-файлам.
+
+---
+
+# 11. Запуск только одного видео без `.ps1`
+
+Для разового запуска можно использовать одну длинную, но **однострочную** команду.
+
+## Hydramist
+
+```powershell
+$BASE = Get-Content ".\initial_prompt.txt" -Raw -Encoding UTF8; $SPECIFIC = Get-Content ".\01_hydramist_prompt.txt" -Raw -Encoding UTF8; $PROMPT = $BASE.Trim() + "`n`n" + $SPECIFIC.Trim(); python -m whisper ".\01_hydramist_macros_keybinds.webm" --model large-v3 --language en --task transcribe --device cuda --fp16 True --output_format all --output_dir ".\out" --word_timestamps True --initial_prompt "$PROMPT"
+```
+
+## Cdew — Keybindings
+
+```powershell
+$BASE = Get-Content ".\initial_prompt.txt" -Raw -Encoding UTF8; $SPECIFIC = Get-Content ".\02_cdew_keybindings_prompt.txt" -Raw -Encoding UTF8; $PROMPT = $BASE.Trim() + "`n`n" + $SPECIFIC.Trim(); python -m whisper ".\02_cdew_keybindings.mkv" --model large-v3 --language en --task transcribe --device cuda --fp16 True --output_format all --output_dir ".\out" --word_timestamps True --initial_prompt "$PROMPT"
+```
+
+## Cdew — Movement
+
+```powershell
+$BASE = Get-Content ".\initial_prompt.txt" -Raw -Encoding UTF8; $SPECIFIC = Get-Content ".\03_cdew_movement_prompt.txt" -Raw -Encoding UTF8; $PROMPT = $BASE.Trim() + "`n`n" + $SPECIFIC.Trim(); python -m whisper ".\03_cdew_arena_movement.mkv" --model large-v3 --language en --task transcribe --device cuda --fp16 True --output_format all --output_dir ".\out" --word_timestamps True --initial_prompt "$PROMPT"
+```
+
+В этих командах все отдельные инструкции разделены точками с запятой. Поэтому команда остаётся синтаксически корректной, даже когда вставляется в PowerShell одной строкой.
+
+Для трёх видео подряд предпочтительнее `.ps1`.
+
+---
+
+# 12. Если скрипт не запускается
+
+## Проверить расширение
+
+```powershell
+Get-ChildItem ".\transcribe_wow_guides*"
+```
+
+Должно быть:
+
+```text
+transcribe_wow_guides.ps1
+```
+
+Не должно быть:
+
+```text
+transcribe_wow_guides.ps1.txt
 ```
 
 ---
 
-# 11. Дополнительные режимы
-
-## Если Whisper повторяет фразы
-
-Повторить проблемный файл с:
+## Проверить синтаксис без запуска Whisper
 
 ```powershell
---condition_on_previous_text False
+$errors = $null; [System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path ".\transcribe_wow_guides.ps1"), [ref]$null, [ref]$errors) | Out-Null; $errors
 ```
 
-Пример:
-
-```powershell
-python -m whisper `
-    ".\03_cdew_arena_movement.mkv" `
-    --model large-v3 `
-    --language en `
-    --task transcribe `
-    --device cuda `
-    --fp16 True `
-    --output_format all `
-    --output_dir ".\out_retry" `
-    --word_timestamps True `
-    --condition_on_previous_text False `
-    --initial_prompt "$PROMPT"
-```
-
-При отключении этого параметра Whisper перестаёт передавать предыдущий распознанный текст в следующее окно. Это может уменьшить зацикливание, но иногда ослабляет связность соседних фрагментов.
+Если ничего не выведено, синтаксических ошибок не обнаружено.
 
 ---
 
-## Если термины хуже распознаются ближе к концу
+## Проверить наличие всех файлов
 
-Попробовать:
-
-```powershell
---carry_initial_prompt True
-```
-
-Пример:
+Вставить одной строкой:
 
 ```powershell
-python -m whisper `
-    ".\01_hydramist_macros_keybinds.webm" `
-    --model large-v3 `
-    --language en `
-    --task transcribe `
-    --device cuda `
-    --fp16 True `
-    --output_format all `
-    --output_dir ".\out_carry" `
-    --word_timestamps True `
-    --carry_initial_prompt True `
-    --initial_prompt "$PROMPT"
+@(".\initial_prompt.txt", ".\01_hydramist_prompt.txt", ".\02_cdew_keybindings_prompt.txt", ".\03_cdew_movement_prompt.txt", ".\01_hydramist_macros_keybinds.webm", ".\02_cdew_keybindings.mkv", ".\03_cdew_arena_movement.mkv") | ForEach-Object { "{0,-55} {1}" -f $_, (Test-Path -LiteralPath $_) }
 ```
 
-`carry_initial_prompt` добавляет исходный промпт к каждому внутреннему окну распознавания, а не только к началу транскрибации.
-
-Не включать оба дополнительных режима заранее. Сначала провести обычный запуск и проверить результат.
-
----
-
-# 12. Основные ошибки
-
-## Пустой промпт
-
-Проверить:
-
-```powershell
-$PROMPT.Length
-```
-
-Если результат `0`, промпт не загрузился.
-
----
-
-## Файл не найден
-
-Проверить наличие файла:
-
-```powershell
-Test-Path ".\02_cdew_keybindings.mkv"
-```
-
-Результат должен быть:
+Для каждого файла должно быть:
 
 ```text
 True
@@ -669,119 +498,21 @@ True
 
 ---
 
-## Whisper не найден
+# 13. Краткое повторение
 
 ```text
-No module named whisper
+1. Видео, промпты и .ps1 лежат в одной папке.
+2. Большой скрипт не вставляется в консоль.
+3. Скрипт сохраняется как transcribe_wow_guides.ps1.
+4. В PowerShell вставляется только однострочная команда запуска.
+5. Скрипт сам переходит в свою папку.
+6. Скрипт соединяет общий и индивидуальный промпты.
+7. Три видео обрабатываются последовательно.
+8. Результаты сохраняются в папку out.
 ```
 
-Проверить установку:
+Команда запуска:
 
 ```powershell
-pip show openai-whisper
-```
-
----
-
-## FFmpeg не найден
-
-```text
-ffmpeg is not recognized
-```
-
-Проверить:
-
-```powershell
-ffmpeg -version
-```
-
-Whisper требует установленный и доступный через `PATH` FFmpeg.
-
----
-
-## CUDA не работает
-
-Проверить:
-
-```powershell
-python -c "import torch; print(torch.cuda.is_available())"
-```
-
-Если вывод:
-
-```text
-False
-```
-
-Whisper не сможет нормально использовать:
-
-```powershell
---device cuda
-```
-
----
-
-## Недостаточно видеопамяти
-
-Возможный текст ошибки:
-
-```text
-CUDA out of memory
-```
-
-Закрыть программы, использующие GPU:
-
-- браузеры с тяжёлыми вкладками;
-    
-- игры;
-    
-- программы генерации изображений;
-    
-- видеоредакторы;
-    
-- другие локальные ИИ-модели.
-    
-
-После этого повторить запуск.
-
----
-
-# 13. Минимальная памятка на 30 секунд
-
-```powershell
-cd "D:\WoW-PvP-Transcription"
-
-mkdir ".\out" -ErrorAction SilentlyContinue | Out-Null
-
-$BASE = Get-Content ".\initial_prompt.txt" -Raw -Encoding UTF8
-$SPECIFIC = Get-Content ".\01_hydramist_prompt.txt" -Raw -Encoding UTF8
-$PROMPT = $BASE.Trim() + "`n`n" + $SPECIFIC.Trim()
-
-python -m whisper `
-    ".\01_hydramist_macros_keybinds.webm" `
-    --model large-v3 `
-    --language en `
-    --task transcribe `
-    --device cuda `
-    --fp16 True `
-    --output_format all `
-    --output_dir ".\out" `
-    --word_timestamps True `
-    --initial_prompt "$PROMPT"
-```
-
----
-
-# 14. Логика рабочего процесса
-
-```text
-1. Открыть PowerShell в папке проекта.
-2. Проверить нужные видео и файлы промптов.
-3. Создать папку out.
-4. Объединить initial_prompt.txt с промптом видео.
-5. Передать объединённый текст через --initial_prompt.
-6. Запустить large-v3 на CUDA с language=en.
-7. Дождаться создания файлов в out.
-8. Проверить TXT, SRT и JSON.
-9. Только при проблемах использовать дополнительные параметры.
+powershell -NoProfile -ExecutionPolicy Bypass -File "D:\WOW Builds\Guides\transcribe_wow_guides.ps1"
 ```
