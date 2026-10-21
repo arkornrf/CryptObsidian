@@ -12,9 +12,7 @@
 > **Панель:** Marzban  
 > **VPN:** Xray VLESS + REALITY + Vision  
 > **Порт панели:** `8000`  
-> **Порт VPN:** `443` (проверить)
-
-**Пароли, приватные ключи, токены бота:** хранить в менеджере паролей, а не в Obsidian.
+> **Порт VPN:** `443`
 
 ---
 
@@ -373,18 +371,18 @@ shutdown -h now
 
 ## 9. Карта инфраструктуры — заполнить
 
-| Компонент              | Значение                          |
-| ---------------------- | --------------------------------- |
-| Marzban ENV            | `/opt/marzban/.env`               |
-| Docker Compose         | `/opt/marzban/docker-compose.yml` |
-| Данные Marzban         | `/var/lib/marzban/`               |
-| Xray config            | Проверить фактический путь        |
-| Xray version           | Проверить                         |
-| REALITY SNI            | `github.com`                      |
-| Telegram backup        | Ежедневно в 00:00 UTC             |
-| Дополнительные сервисы | -                                 |
-| Web-консоль провайдера | serv.host                         |
-| Хранение паролей       | -                                 |
+| Компонент              | Значение                                                                  |
+| ---------------------- | ------------------------------------------------------------------------- |
+| Marzban ENV            | `/opt/marzban/.env`                                                       |
+| Docker Compose         | `/opt/marzban/docker-compose.yml`                                         |
+| Данные Marzban         | `/var/lib/marzban/`                                                       |
+| Xray config            | Проверить фактический путь                                                |
+| Xray version           | 24.12.31 (Xray, Penetrates Everything.)<br>4be32e9 (go1.23.4 linux/amd64) |
+| REALITY SNI            | `github.com`                                                              |
+| Telegram backup        | Ежедневно в 00:00 UTC                                                     |
+| Дополнительные сервисы | -                                                                         |
+| Web-консоль провайдера | serv.host                                                                 |
+| Хранение паролей       | -                                                                         |
 
 ---
 
