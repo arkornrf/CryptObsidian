@@ -376,7 +376,7 @@ shutdown -h now
 | Marzban ENV            | `/opt/marzban/.env`                                                       |
 | Docker Compose         | `/opt/marzban/docker-compose.yml`                                         |
 | Данные Marzban         | `/var/lib/marzban/`                                                       |
-| Xray config            | Проверить фактический путь                                                |
+| Xray config            | `/var/lib/marzban/xray_config.json`                                       |
 | Xray version           | 24.12.31 (Xray, Penetrates Everything.)<br>4be32e9 (go1.23.4 linux/amd64) |
 | REALITY SNI            | `github.com`                                                              |
 | Telegram backup        | Ежедневно в 00:00 UTC                                                     |
