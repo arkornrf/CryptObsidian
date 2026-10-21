@@ -6,9 +6,9 @@
 > **Дата открытия:** 29.09.2026  
 > **Хост:** `arkornrf1.serv.host`  
 > **IPv4:** `13.143.193.76`  
-> **ОС:** Ubuntu 24.04 (проверить)  
+> **ОС:** Ubuntu 24.04  
 > **SSH-пользователь:** `root`  
-> **SSH-порт:** `22` (если не изменён)  
+> **SSH-порт:** `22`  
 > **Панель:** Marzban  
 > **VPN:** Xray VLESS + REALITY + Vision  
 > **Порт панели:** `8000`  
@@ -373,22 +373,52 @@ shutdown -h now
 
 ## 9. Карта инфраструктуры — заполнить
 
-|Компонент|Значение|
-|---|---|
-|Marzban ENV|`/opt/marzban/.env`|
-|Docker Compose|`/opt/marzban/docker-compose.yml`|
-|Данные Marzban|`/var/lib/marzban/`|
-|Xray config|Проверить фактический путь|
-|Xray version|Проверить|
-|REALITY SNI|`github.com` (проверить)|
-|Telegram backup|Настроен, проверить расписание|
-|Дополнительные сервисы|Заполнить|
-|Web-консоль провайдера|Добавить URL|
-|Хранение паролей|Указать менеджер паролей|
-
-_Стандартные пути приведены для установки Marzban официальным скриптом. Фактическую конфигурацию следует проверить на сервере._
-
+| Компонент              | Значение                          |
+| ---------------------- | --------------------------------- |
+| Marzban ENV            | `/opt/marzban/.env`               |
+| Docker Compose         | `/opt/marzban/docker-compose.yml` |
+| Данные Marzban         | `/var/lib/marzban/`               |
+| Xray config            | Проверить фактический путь        |
+| Xray version           | Проверить                         |
+| REALITY SNI            | `github.com`                      |
+| Telegram backup        | Ежедневно в 00:00 UTC             |
+| Дополнительные сервисы | -                                 |
+| Web-консоль провайдера | serv.host                         |
+| Хранение паролей       | -                                 |
 
 ---
 
-## 10. Карта инфраструктуры — заполнить
+## 10. SSH-алиас — чтобы не вводить IP каждый раз
+
+На Windows открой файл `$HOME\.ssh\config` (создай, если отсутствует) и добавь:
+
+```
+Host arkorn-nl
+    HostName 13.143.193.76
+    User root
+    Port 22
+    ServerAliveInterval 30
+    ServerAliveCountMax 3
+```
+
+После этого в PowerShell достаточно:
+
+```
+ssh arkorn-nl
+```
+
+А для панели:
+
+```
+ssh -N -L 127.0.0.1:8000:127.0.0.1:8000 arkorn-nl
+```
+
+## 11. Разовая проверка всего сервера
+
+Одна команда из PowerShell выдаст основные показатели без отдельного интерактивного входа:
+
+```
+ssh arkorn-nl "uptime; free -h; df -h /; docker ps; marzban status"
+```
+
+Особенно полезно после перебоев в работе VPN.
