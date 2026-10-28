@@ -414,9 +414,13 @@ ssh -N -L 127.0.0.1:8000:127.0.0.1:8000 arkorn-nl
 ## 11. Разовая проверка всего сервера
 
 *Одна команда из PowerShell выдаст основные показатели без отдельного интерактивного входа:*
-
 ```
 ssh arkorn-nl "uptime; free -h; df -h /; docker ps; marzban status"
+```
+
+*Одна команда внутри SSH:*
+```
+uptime; free -h; df -h /; docker ps; marzban status
 ```
 
 **Особенно полезно после перебоев в работе VPN.*
